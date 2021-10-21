@@ -12,14 +12,36 @@
   </head>
   <body>
     <div class="container">
-        <h1>Formulario de inscripci&oacute;n <a href="index6.html" class="btn btn-secondary">></a></h1>
+        <div class="card border-success">
+            <h5 class="card-header border-success">Mejoras</h5>
+            <div class="card-body text-success">
+                <ul class="card-text">
+                    <li>Mejorar la descripción del campo nombre</li>
+                    <li>Asegurar que Nombre y Apellido esté en mayúsculas</li>
+                </ul>
+            </div>
+        </div>
+        <h1>Formulario de inscripci&oacute;n <a href="index7.html" class="btn btn-secondary">></a></h1>
         <div class="row">
             <div class="col">
                 <form class="needs-validation" novalidate>
-                    <div class="mb-3">
-                        <label class="form-label">Nombre y Apellido:</label>
-                        <input type="text" class="form-control" required>
-                        <div class="invalid-feedback">Por favor ingrese este valor.</div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre:</label>
+                                <input type="text" class="form-control capitalize" required>
+                                <div class="form-text">Si su nombre es compuesto ingrese ambos</div>
+                                <div class="invalid-feedback">Por favor ingrese este valor.</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label">Apellido:</label>
+                                <input type="text" class="form-control capitalize" required>
+                                <div class="form-text">Si su apellido es compuesto ingrese ambos</div>
+                                <div class="invalid-feedback">Por favor ingrese este valor.</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">DNI:</label>
@@ -162,26 +184,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
     <script>
+        // capitalizar palabras
+        const capitalizar = str => str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
+
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
-        'use strict'
+            'use strict'
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
 
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-                }
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                        }
 
-                form.classList.add('was-validated')
-            }, false)
-            })
-        })()
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            
+            // asociar la funcion de capitalizar a los inputs que tienen la clase capitalize
+            document.querySelectorAll('.capitalize').forEach(item => {
+                item.addEventListener('input', function () {
+                    this.value = capitalizar(this.value);
+                })
+            });
+
+            }            
+        )();
+        
     </script>
   </body>
 </html>

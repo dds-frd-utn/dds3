@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Inscripci&oacute;n</title>
+    <style>
+    .progress{
+      width: 100%;
+      border: 1px solid;
+      padding: 0;
+    }
+    .accordion-button>.row{
+      width: 100%;
+      padding-right: 5%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Formulario de inscripci&oacute;n</h1>
+        <p>Para inscribirse por favor complete el siguiente formulario. Al finalizar se enviará un correo electrónico con los datos ingresados para confirmar su inscripción.</p>
+        <div class="row">
+            <div class="col">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button alert-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <div class="row">
+                                <span class="col">Información Personal</span>
+                                <div class="progress col"><div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>                        
+                              </div>
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Si lo deseas puedes </strong>
+                                <a href="pdf417.html" class="btn btn-success">escanear tu DNI</a>
+                                <strong> para completar estos datos.</strong>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label class="form-label">Nombre:</label>
+                                            <input type="text" class="form-control capitalize" required>
+                                            <div class="form-text">Si su nombre es compuesto ingrese ambos</div>
+                                            <div class="invalid-feedback">Por favor ingrese este valor.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label class="form-label">Apellido:</label>
+                                            <input type="text" class="form-control capitalize" required>
+                                            <div class="form-text">Si su apellido es compuesto ingrese ambos</div>
+                                            <div class="invalid-feedback">Por favor ingrese este valor.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">DNI:</label>
+                                    <input type="number" class="form-control" pattern="[1-4]{5}" required>
+                                    <div class="form-text">Ingrese su n&uacute;mero de documento sin puntos ni comas.</div>
+                                    <div class="invalid-feedback">Este valor es obligatorio y debe ser un número de documento válido.</div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button alert-warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <div class="row">
+                                <span class="col">Nacimiento</span>
+                                <div class="progress col"><div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>                        
+                              </div>
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="mb-3">
+                                <label class="form-label">Fecha de Nacimiento:</label>
+                                <input type="date" class="form-control" required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Ciudad de nacimiento:</label>
+                                <input type="text" class="form-control searchAddress" required>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button alert-warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <div class="row">
+                                <span class="col">Datos de contacto</span>
+                                <div class="progress col"><div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>                        
+                              </div>
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="mb-3">
+                                <label class="form-label">Dirección</label>
+                                <input type="text" class="form-control searchAddress" required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Tel&eacute;fono:</label>
+                                <input type="number" class="form-control" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label">Correo Electr&oacute;nico:</label>
+                                  <input type="email" class="form-control" required>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button alert-warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              <div class="row">
+                                <span class="col">Datos de trabajo</span>
+                                <div class="progress col"><div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>                        
+                              </div>
+                            </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="mb-3">
+                                <label class="form-label">Ocupaci&oacute;n:</label>
+                                <select class="form-control">
+                                  <option value="-1">--Seleccione--</option>
+                                  <option value="1">Directores y gerentes</option>
+                                  <option value="2">Profesionales científicos e intelectuales</option>
+                                  <option value="3">Técnicos y profesionales de nivel medio</option>
+                                  <option value="4">Personal de apoyo administrativo</option>
+                                  <option value="5">Trabajadores de los servicios y vendedores de comercios y mercados</option>
+                                  <option value="6">Agricultores y trabajadores calificados agropecuarios, forestales y pesqueros</option>
+                                  <option value="7">Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</option>
+                                  <option value="8">Operadores de instalaciones y máquinas y ensambladores</option>
+                                  <option value="9">Ocupaciones elementales</option>
+                                  <option value="0">Ocupaciones militares</option>
+                                </select>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Dirección del trabajo</label>
+                                <input type="text" class="form-control searchAddress" required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Tel&eacute;fono de Trabajo:</label>
+                                <input type="number" class="form-control" required>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button alert-warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              <div class="row">
+                                <span class="col">Educación</span>
+                                <div class="progress col"><div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>                        
+                              </div>
+                            </button>
+                          </h2>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <div class="mb-3">
+                                <label class="form-label">Nivel de Estudios:</label>
+                                <select class="form-control" required>
+                                  <option value="-1">--Seleccione--</option>
+                                  <option value="1">Primaria Incompleta</option>
+                                  <option value="2">Primaria Completa</option>
+                                  <option value="3">Secundaria Incompleta</option>
+                                  <option value="4">Secundaria Completa</option>
+                                  <option value="5">Terciario Incompleto</option>
+                                  <option value="6">Terciario Completo</option>
+                                  <option value="7">Universitario Incompleto</option>
+                                  <option value="8">Universitario Completo</option>
+                                  <option value="9">Posgrado</option>
+                                  <option value="10">Desconoce</option>
+                                  <option value="11">Sin Información</option>
+                                  <option value="12">No Tiene</option>
+                                </select>
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label">Instituci&oacute;n:</label>
+                                  <input type="text" class="form-control" required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Dirección</label>
+                                <input type="text" class="form-control searchAddress" required>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <center><button class="btn btn-primary" disabled>Terminar inscripci&oacute;n</button></center>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Google Places API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtds967ApYC29dP0ZiYuOnmvd9eGfPaPU&libraries=places"></script>
+
+    <script>
+        // capitalizar palabras
+        const capitalizar = str => str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
+
+        (function () {
+            'use strict'
+
+            // asociar la funcion de capitalizar a los inputs que tienen la clase capitalize
+            document.querySelectorAll('.capitalize').forEach(item => {
+                item.addEventListener('input', function () {
+                    this.value = capitalizar(this.value);
+                })
+            });
+
+            function initialize() {
+              var inputs = document.querySelectorAll('.searchAddress');
+              Array.prototype.slice.call(inputs)
+                .forEach(function (input) {
+                  var ac = new google.maps.places.Autocomplete(input);
+                  ac.addListener('place_changed', 'updateProgress');
+                })
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+        })();
+    </script>
+
+    <!-- Usando jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $( document ).ready(function() {
+        $("input").change(updateProgress);
+        $("select").change(updateProgress);
+      });
+      function updateProgress(){
+        var fields = $(this).parents(".accordion-body").find("input,select");
+        var validFields = 0;
+        fields.each((x,y)=>{
+          if( (y.nodeName=='SELECT' && y.value>-1) ||
+              (y.nodeName!='SELECT' && y.validity.valid) ){
+            validFields++;
+          }
+        });
+        var percent = Math.floor(100*validFields/fields.length);
+        $(this).parents(".accordion-item").find(".progress-bar").css("width",percent+"%");
+
+        if(percent==100){
+          $(this).parents('.accordion-collapse').collapse('hide');
+          $(this).closest('.accordion-item').next().find('.accordion-collapse').collapse('show');
+        }
+
+        var complete = true;
+        $(".progress-bar").each(function(i) {
+          if($(this).width()<$(this).parent().width()){
+            complete=false;
+          }
+        });
+        if(complete==true){
+          $("center>button").prop("disabled",false);
+        }
+      }
+    </script>
+
+
+  </body>
+</html>
